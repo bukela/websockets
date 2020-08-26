@@ -96,5 +96,26 @@
                 </div>
             </div>
         </div>
+        <script src="js/app.js"></script>
+    <script>
+  
+        window.Echo.channel('user-channel-1')
+            .listen('MessageSent', (e) => {
+                console.log(e);
+            });
+
+            window.Echo.channel('notification_3')
+            .listen('NewNotification', (e) => {
+                console.log(e);
+            });
+            // Echo.join('user-channel-1')
+            // .here(function (user) {
+            //     console.log('here xxx');
+            //     console.log(user);
+            // })
+            // .listen('MessageSent', (e) => {
+            //     console.log(e);
+            // });
+    </script>
     </body>
 </html>
